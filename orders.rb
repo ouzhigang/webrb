@@ -30,7 +30,7 @@ get '/json' do
 end
 
 get '/img' do
-	send_file 'static/1.png', :type => :png	
+	send_file File.dirname(__FILE__) + '/static/1.png', :type => :png
 end
 
 get '/custom' do
