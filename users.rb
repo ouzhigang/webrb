@@ -23,3 +23,19 @@ get %r{/users/view} do
 	end
 	'/users/view=====参数为:' + name
 end
+
+get '/users/upload' do
+	erb :users_upload
+end
+
+post '/users/do_upload' do
+	
+	unless params[:file1]
+		return 'upload fail'
+    end
+	
+	puts params[:file1]
+	#puts params[:file1][:tempfile].read
+	
+	'upload success'
+end
